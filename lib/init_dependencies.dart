@@ -1,0 +1,24 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:get_it/get_it.dart';
+import 'package:hive/hive.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:stratosfera/core/common/cubit/app_user/app_user_cubit.dart';
+import 'package:stratosfera/core/network/connection_checker.dart';
+import 'package:stratosfera/feature/auth/data/datasource/auth_remote_data_source.dart';
+import 'package:stratosfera/feature/auth/data/repository/auth_repository_impl.dart';
+import 'package:stratosfera/feature/auth/domain/repository/auth_repository.dart';
+import 'package:stratosfera/feature/auth/domain/usecase/current_user.dart';
+import 'package:stratosfera/feature/auth/domain/usecase/user_login.dart';
+import 'package:stratosfera/feature/auth/domain/usecase/user_register.dart';
+import 'package:stratosfera/feature/auth/presentation/bloc/auth_bloc.dart';
+import 'package:stratosfera/feature/blog/data/datasource/blog_local_data_source.dart';
+import 'package:stratosfera/feature/blog/data/datasource/blog_remote_data_source.dart';
+import 'package:stratosfera/feature/blog/data/repository/blog_repository_impl.dart';
+import 'package:stratosfera/feature/blog/domain/repository/blog_repository.dart';
+import 'package:stratosfera/feature/blog/domain/usecase/get_all_blogs.dart';
+import 'package:stratosfera/feature/blog/domain/usecase/upload_blog.dart';
+import 'package:stratosfera/feature/blog/presentation/bloc/blog_bloc.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+part 'init_dependencies.main.dart';
